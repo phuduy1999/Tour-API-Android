@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="project_name">BOOKING TOUR</string>
+    <string name="login">Tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="confirm">Xác nhận</string>
+    <string name="edit">Chỉnh sửa</string>
+    <string name="signup">  Đăng ký  </string>
+    <string name="name">Họ tên</string>
+    <string name="gender">Giới tính</string>
+    <string name="gender_male">Nam</string>
+    <string name="gender_female">Nữ</string>
+    <string name="dob">Ngày sinh</string>
+    <string name="email">Email</string>
+    <string name="phonenumber">Số điện thoại</string>
+    <string name="address">Địa chỉ</string>
+    <string name="titledaft">HÀ NỘI - HẠ LONG 2 NGÀY 1 ĐÊM</string>
+    <string name="time">Thời gian: </string>
+    <string name="daystart">Ngày khởi hành: </string>
+    <string name="placestart">Nơi khởi hành: </string>
+    <string name="price">Giá: </string>
+    <string name="amount">Số lượng: </string>
+    <string name="titleinfo">THÔNG TIN CÁ NHÂN</string>
+
+</resources>

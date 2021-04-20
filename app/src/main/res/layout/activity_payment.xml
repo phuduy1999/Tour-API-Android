@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Payment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="229dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:background="#1B2971"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cs_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px">
+
+            <Button
+                android:id="@+id/btnDatTour"
+                android:layout_width="108dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="28dp"
+                android:backgroundTint="#5C93A8"
+                android:fontFamily="@font/averia_sans_libre_bold"
+                android:insetTop="@dimen/cardview_default_elevation"
+                android:insetBottom="@dimen/cardview_default_elevation"
+                android:text="Đặt Tour"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/csThongTinKH"
+                android:layout_width="323dp"
+                android:layout_height="106dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="38dp"
+                android:background="@drawable/my_border02"
+                android:backgroundTint="#5C93A8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="280dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="Nguyễn Phú Duy"
+                    android:textAlignment="center"
+                    android:textColor="#1B2971"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtPhone"
+                    android:layout_width="98dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="0396902587"
+                    android:textColor="#1B2971"
+                    app:layout_constraintStart_toEndOf="@+id/txtLbSdt"
+                    app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+                <TextView
+                    android:id="@+id/txtCMND"
+                    android:layout_width="86dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="251152287"
+                    android:textColor="#1B2971"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtLbCMND"
+                    app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+                <TextView
+                    android:id="@+id/txtLbCMND"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="CMND: "
+                    android:textColor="#131212"
+                    app:layout_constraintEnd_toStartOf="@+id/txtCMND"
+                    app:layout_constraintStart_toEndOf="@+id/txtPhone"
+                    app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+                <TextView
+                    android:id="@+id/txtLbSdt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="SĐT: "
+                    android:textColor="#131212"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtLbChiTietTT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/averia_sans_libre_bold"
+                android:text="Chi Tiết Thanh Toán"
+                android:textColor="#1B2971"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/csThongTinKH" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="357dp"
+                android:layout_height="124dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtLbChiTietTT"
+                >
+
+                <ImageView
+                    android:id="@+id/imgTour"
+                    android:layout_width="123dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/vungtau" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="215dp"
+                    android:layout_height="107dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="9dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgTour"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/txtNameTour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/averia_sans_libre_bold"
+                        android:text="Tour 3 ngày 2 đêm Vũng Tàu"
+                        android:textColor="#131212"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtDescriptionTour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/averia_sans_libre_light_italic"
+                        android:text="Tour du lịch mang lại trải nghiệm mới lạ tại thành phố biển..."
+                        android:textSize="12sp"
+                        android:typeface="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtNameTour" />
+
+                    <TextView
+                        android:id="@+id/txtPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/averia_sans_libre_bold"
+                        android:text="1.000.000 VND"
+                        android:textColor="#131212"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtDescriptionTour" />
+
+                    <TextView
+                        android:id="@+id/txtLbNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/averia_sans_libre_bold"
+                        android:text="Số lượng: "
+                        android:textColor="#131212"
+                        app:layout_constraintStart_toEndOf="@+id/txtPrice"
+                        app:layout_constraintTop_toBottomOf="@+id/txtDescriptionTour" />
+
+                    <EditText
+                        android:id="@+id/edtSoLuong"
+                        android:layout_width="27dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="3dp"
+                        android:ems="10"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:inputType="number"
+                        android:textColor="#131212"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/txtLbNumber"
+                        app:layout_constraintTop_toBottomOf="@+id/txtDescriptionTour" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/averia_sans_libre_bold"
+                android:text="Chọn phương thức thanh toán"
+                android:textColor="#1B2971"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+            <RadioGroup
+                android:id="@+id/radgPTTT"
+                android:layout_width="222dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                <RadioButton
+                    android:id="@+id/radTTThe"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:buttonTint="#1B2971"
+                    android:checked="true"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="Thẻ tín dụng/ Thẻ ghi nợ"
+                    android:textColor="#131212"
+                    android:textColorHighlight="#1B2971"
+                    android:textColorLink="#1B2971" />
+
+                <RadioButton
+                    android:id="@+id/radTTViDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:buttonTint="#1B2971"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="Ví điện tử"
+                    android:textColor="#131212" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/edMaGiamGia"
+                android:layout_width="349dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:autofillHints=""
+                android:background="@drawable/my_border02"
+                android:ems="10"
+                android:fontFamily="@font/averia_sans_libre"
+                android:hint="Nhập mã giảm giá nếu có"
+                android:inputType="textPersonName"
+                android:textColor="#131212"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radgPTTT" />
+
+            <Button
+                android:id="@+id/btnApDung"
+                android:layout_width="98dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="#5C93A8"
+                android:fontFamily="@font/averia_sans_libre"
+                android:insetTop="@dimen/cardview_default_elevation"
+                android:insetBottom="@dimen/cardview_default_elevation"
+                android:text="Áp Dụng"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/edMaGiamGia"
+                app:layout_constraintEnd_toEndOf="@+id/edMaGiamGia"
+                app:layout_constraintTop_toTopOf="@+id/edMaGiamGia" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="338dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edMaGiamGia">
+
+                <TextView
+                    android:id="@+id/txtLbTienHang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="Tiền hàng: "
+                    android:textColor="#131212"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtLbChiPhiKhac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="Chi Phí Khác: "
+                    android:textColor="#131212"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLbTienHang" />
+
+                <TextView
+                    android:id="@+id/txtLbTongTien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="Tổng Tiền: "
+                    android:textColor="#131212"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLbChiPhiKhac" />
+
+                <TextView
+                    android:id="@+id/txtTienHang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.000.000 VND"
+                    android:textColor="#131212"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtChiPhiKhac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="10.000 VND"
+                    android:textColor="#131212"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTienHang" />
+
+                <TextView
+                    android:id="@+id/txtTongTien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="1.010.000 VND"
+                    android:textColor="#131212"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtChiPhiKhac" />
+
+                <TextView
+                    android:id="@+id/txtLbTongCong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/averia_sans_libre_bold"
+                    android:text="Tổng Cộng: "
+                    android:textColor="#131212"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLbTongTien" />
+
+                <TextView
+                    android:id="@+id/txtTongCong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/averia_sans_libre_bold"
+                    android:text="1.010.000 VND"
+                    android:textColor="#1B2971"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTongTien" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

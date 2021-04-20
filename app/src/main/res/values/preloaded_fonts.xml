@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abhaya_libre_extrabold</item>
+        <item>@font/alex_brush</item>
+        <item>@font/allura</item>
+        <item>@font/arizonia</item>
+        <item>@font/calligraffitti</item>
+        <item>@font/miss_fajardose</item>
+        <item>@font/stalemate</item>
+        <item>@font/sue_ellen_francisco</item>
+        <item>@font/yellowtail</item>
+        <item>@font/acme</item>
+        <item>@font/actor</item>
+        <item>@font/amethysta</item>
+        <item>@font/averia_sans_libre</item>
+        <item>@font/averia_sans_libre_bold</item>
+        <item>@font/averia_sans_libre_italic</item>
+        <item>@font/averia_sans_libre_light_italic</item>
+    </array>
+</resources>
