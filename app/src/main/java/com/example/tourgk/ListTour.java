@@ -63,7 +63,7 @@ public class ListTour extends AppCompatActivity {
                 progressBar.setVisibility(View.VISIBLE);
                 currentPage++;
 
-                loadNextPage();
+                loadPage(currentPage);
             }
 
             @Override
@@ -77,7 +77,7 @@ public class ListTour extends AppCompatActivity {
             }
         });
 
-        loadFirstPage();
+        loadPage(1);
     }
 
     private void setControl() {
@@ -85,8 +85,8 @@ public class ListTour extends AppCompatActivity {
         progressBar = findViewById((R.id.progress_bar));
     }
 
-    private void loadNextPage() {
-        Call<Tour> tours = service.getTours(currentPage, 9);
+    private void loadPage(int page) {
+        Call<Tour> tours = service.getTours(page, 9);
         tours.enqueue(new Callback<Tour>() {
             @Override
             public void onResponse(Call<Tour> call, Response<Tour> response) {
@@ -104,29 +104,6 @@ public class ListTour extends AppCompatActivity {
 
                 isLoading = false;
                 progressBar.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onFailure(Call<Tour> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        });
-    }
-
-    private void loadFirstPage() {
-        Call<Tour> tours = service.getTours(1, 9);
-        tours.enqueue(new Callback<Tour>() {
-            @Override
-            public void onResponse(Call<Tour> call, Response<Tour> response) {
-                if (!response.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(), response.code(), Toast.LENGTH_LONG).show();
-                    return;
-                }
-
-                Tour tour = response.body();
-                progressBar.setVisibility(View.GONE);
-                tourList.addAll(tour.getListResult());
-                tourFullListAdapter.notifyDataSetChanged();//cap nhat du lieu
             }
 
             @Override
