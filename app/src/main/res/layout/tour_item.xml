@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/titledaft"
+            android:text="@string/loading"
             android:textAlignment="center"
             android:textColor="#1A8897"
             android:textSize="20dp"
@@ -47,7 +47,7 @@
                 android:id="@+id/tvDuration"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="3 ngày 2 đêm" />
+                android:text="@string/loading" />
         </LinearLayout>
 
 
@@ -69,7 +69,7 @@
                 android:id="@+id/tvStartDate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="29/02/2021" />
+                android:text="@string/loading" />
         </LinearLayout>
 
         <LinearLayout
@@ -90,7 +90,7 @@
                 android:id="@+id/tvLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="HN-HA LONG" />
+                android:text="@string/loading" />
         </LinearLayout>
 
         <LinearLayout
@@ -110,7 +110,7 @@
                 android:id="@+id/tvPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2.000.000 đ"
+                android:text="@string/loading"
                 android:textColor="#F44336"
                 android:textSize="24dp" />
         </LinearLayout>
@@ -125,7 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
-                android:text="CÒN VÉ"
+                android:text="@string/loading"
                 android:textColor="#4A8309"
                 android:textSize="24dp" />
 
@@ -142,7 +142,7 @@
                 android:id="@+id/tvGroupSize"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="20/30"
+                android:text="@string/loading"
                 android:textColor="#9C27B0"
                 android:textSize="16dp"
                 android:layout_gravity="center"

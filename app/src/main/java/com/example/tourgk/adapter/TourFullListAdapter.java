@@ -3,6 +3,7 @@ package com.example.tourgk.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,17 +14,19 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.tourgk.ListTour;
 import com.example.tourgk.R;
 import com.example.tourgk.TourDetail;
 import com.example.tourgk.api.ApiClient;
 import com.example.tourgk.model.Tour;
+
 import java.util.List;
 
 public class TourFullListAdapter extends RecyclerView.Adapter<TourFullListAdapter.TourFullListViewHolder> {
     Context context;
     List<Tour> tourList;
 
-    public TourFullListAdapter(Context context,List<Tour> tourList) {
+    public TourFullListAdapter(Context context, List<Tour> tourList) {
         this.context = context;
         this.tourList = tourList;
         notifyDataSetChanged();
@@ -32,19 +35,19 @@ public class TourFullListAdapter extends RecyclerView.Adapter<TourFullListAdapte
     @NonNull
     @Override
     public TourFullListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tour_item, parent, false);
-            return new TourFullListAdapter.TourFullListViewHolder(view);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tour_item, parent, false);
+        return new TourFullListAdapter.TourFullListViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull TourFullListViewHolder holder, int position) {
-        Tour tour=tourList.get(position);
+        Tour tour = tourList.get(position);
         holder.tvTourName.setText(tour.getName());
         holder.tvLocation.setText(tour.getLocation());
-        holder.tvPrice.setText(String.valueOf(tour.getPrice()));
+        holder.tvPrice.setText(String.valueOf(tour.getPrice())+" vnd");
         Glide.with(context).load(ApiClient.BASE_URL + "template/upload/tour/"
                 + tour.getImageCover()).into(holder.imgTour);
-        holder.tvDuration.setText(String.valueOf(tour.getDuration()));
+        holder.tvDuration.setText(String.valueOf(tour.getDuration())+" ngày");
         holder.tvStartDate.setText(tour.getStartDate());
 
         int curGS = tour.getCurrentGroupSize();
@@ -62,15 +65,14 @@ public class TourFullListAdapter extends RecyclerView.Adapter<TourFullListAdapte
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context,TourDetail.class);
-                context.startActivity(intent);
+                ((ListTour)context).chuyenTrangDetail(tour.getId());
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        if(tourList==null){
+        if (tourList == null) {
             return 0;
         }
         return tourList.size();

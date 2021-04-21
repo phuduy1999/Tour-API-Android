@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.tourgk.ListTour;
+import com.example.tourgk.MainActivity;
 import com.example.tourgk.R;
 import com.example.tourgk.api.ApiClient;
 import com.example.tourgk.model.Tour;
@@ -43,6 +45,13 @@ public class TourAdapter extends RecyclerView.Adapter<TourAdapter.TourViewHolder
         //holder.tourImage.setImageResource(tourList.get(position).getImageUrl());
         Glide.with(context).load(ApiClient.BASE_URL + "template/upload/tour/"
                 + tourList.get(position).getImageCover()).into(holder.tourImage);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity)context).chuyenTrangDetail(tourList.get(position).getId());
+            }
+        });
     }
 
     @Override

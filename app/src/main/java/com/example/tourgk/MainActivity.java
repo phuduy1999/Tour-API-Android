@@ -80,4 +80,12 @@ public class MainActivity extends AppCompatActivity {
         tourAdapter = new TourAdapter(this, tourList);
         tourRecycler.setAdapter(tourAdapter);
     }
+
+    public void chuyenTrangDetail(Long id){
+        Intent intent = new Intent(this, TourDetail.class);
+        Bundle bundle = new Bundle();
+        bundle.putLong("id", id);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
 }

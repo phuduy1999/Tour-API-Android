@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -111,5 +112,13 @@ public class ListTour extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    public void chuyenTrangDetail(Long id){
+        Intent intent = new Intent(this, TourDetail.class);
+        Bundle bundle = new Bundle();
+        bundle.putLong("id", id);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 }
