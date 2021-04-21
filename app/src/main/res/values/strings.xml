@@ -17,7 +17,7 @@
     <string name="titledaft">HÀ NỘI - HẠ LONG 2 NGÀY 1 ĐÊM</string>
     <string name="time">Thời gian: </string>
     <string name="daystart">Ngày khởi hành: </string>
-    <string name="placestart">Nơi khởi hành: </string>
+    <string name="location">Nơi đến: </string>
     <string name="price">Giá: </string>
     <string name="amount">Số lượng: </string>
     <string name="titleinfo">THÔNG TIN CÁ NHÂN</string>

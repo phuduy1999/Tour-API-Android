@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         //call API
         ApiService service = ApiClient.getClient().create(ApiService.class);
 
-        Call<Tour> tours = service.getTours();
+        Call<Tour> tours = service.getTours(1,9);
         tours.enqueue(new Callback<Tour>() {
             @Override
             public void onResponse(Call<Tour> call, Response<Tour> response) {
@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ListTour.class);
                 startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
             }
         });
     }

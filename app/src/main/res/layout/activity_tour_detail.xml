@@ -94,7 +94,7 @@
                     android:drawableLeft="@drawable/compass"
                     android:drawablePadding="3dp"
                     android:paddingHorizontal="2dp"
-                    android:text="@string/placestart"
+                    android:text="@string/location"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
