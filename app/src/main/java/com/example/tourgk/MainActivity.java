@@ -7,10 +7,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tourgk.adapter.TourAdapter;
+import com.example.tourgk.adapter.TourFullListAdapter;
 import com.example.tourgk.api.ApiClient;
 import com.example.tourgk.api.ApiService;
 import com.example.tourgk.model.Tour;
@@ -25,7 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView tourRecycler;
     TourAdapter tourAdapter;
+
+    RecyclerView topTourRecycler;
+    TourFullListAdapter topTourAdapter;
+
     TextView tvSeeAll;
+    ImageView imgUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 Tour tour = response.body();
 
                 setTourRecycler(tour.getListResult());
+                setTopTourRecycler(tour.getListResult());
             }
 
             @Override
@@ -61,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setControl(){
         tvSeeAll=findViewById(R.id.tvSeeAll);
+        tourRecycler = findViewById(R.id.rcvNewTours);
+        topTourRecycler = findViewById(R.id.rcvTopTours);
+        imgUser=findViewById(R.id.imgUser);
     }
 
     private void setEvent(){
@@ -71,14 +82,28 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        imgUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Signin.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setTourRecycler(List<Tour> tourList) {
-        tourRecycler = findViewById(R.id.recent_recycler);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         tourRecycler.setLayoutManager(layoutManager);
         tourAdapter = new TourAdapter(this, tourList);
         tourRecycler.setAdapter(tourAdapter);
+    }
+
+    private void setTopTourRecycler(List<Tour> tourList) {
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
+        topTourRecycler.setLayoutManager(layoutManager);
+        topTourAdapter = new TourFullListAdapter(this, tourList);
+        topTourRecycler.setAdapter(topTourAdapter);
     }
 
     public void chuyenTrangDetail(Long id){
