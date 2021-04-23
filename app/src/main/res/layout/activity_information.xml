@@ -23,6 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/back" />
+
             <TextView
                 android:id="@+id/txt_title"
                 android:layout_width="match_parent"
@@ -42,16 +43,17 @@
             android:layout_gravity="center"
             android:paddingTop="20dp"
             android:src="@drawable/user1" />
+
         <TextView
-            android:id="@+id/loginname"
+            android:id="@+id/tvUsernameInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:textSize="30dp"
             android:layout_gravity="center"
+            android:paddingTop="10dp"
             android:text="ABC"
             android:textColor="@color/black"
-            />
+            android:textSize="30dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,7 +64,7 @@
             android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/txt_name"
+            android:id="@+id/tvNameClientInfo"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -80,7 +82,7 @@
             android:textSize="20dp" />
 
         <RadioGroup
-            android:id="@+id/radioGroup"
+            android:id="@+id/radioGroupInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -92,7 +94,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvPasswordSignup">
 
             <RadioButton
-                android:id="@+id/radioBtnMale"
+                android:id="@+id/radioBtnMaleInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="80dp"
@@ -101,7 +103,7 @@
                 android:textSize="18dp" />
 
             <RadioButton
-                android:id="@+id/radioBtnFemale"
+                android:id="@+id/radioBtnFemaleInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/gender_female"
@@ -118,7 +120,7 @@
             android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/txt_dob"
+            android:id="@+id/tvBirthDayInfo"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -126,6 +128,7 @@
             android:gravity="left"
             android:text="@string/project_name"
             android:textSize="24dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -135,7 +138,7 @@
             android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/txt_email"
+            android:id="@+id/tvEmailInfo"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -143,6 +146,7 @@
             android:gravity="left"
             android:text="@string/project_name"
             android:textSize="24dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -152,7 +156,7 @@
             android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/txt_phonenumber"
+            android:id="@+id/tvPhoneNumberInfo"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -160,6 +164,7 @@
             android:gravity="left"
             android:text="@string/project_name"
             android:textSize="24dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -169,7 +174,7 @@
             android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/txt_address"
+            android:id="@+id/tvAddressInfo"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -177,14 +182,15 @@
             android:gravity="left"
             android:text="@string/project_name"
             android:textSize="24dp" />
+
         <Button
-            android:id="@+id/btn_confirm"
+            android:id="@+id/btnEdit"
             android:layout_width="350dp"
             android:layout_height="60dp"
-            android:paddingTop="10dp"
             android:layout_gravity="center_horizontal|center"
+            android:paddingTop="10dp"
             android:text="@string/edit"
             android:textSize="24sp"
-            app:backgroundTint="#35D7EC"/>
+            app:backgroundTint="#35D7EC" />
     </LinearLayout>
 </ScrollView>

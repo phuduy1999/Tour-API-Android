@@ -1,9 +1,12 @@
 package com.example.tourgk.api;
 
+import com.example.tourgk.model.BookingRequest;
 import com.example.tourgk.model.Tour;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface ApiService {
@@ -12,4 +15,10 @@ public interface ApiService {
 
     @GET("api/tours/{id}")
     Call<Tour> getTourById(@Path("id") Long id);
+
+    @POST("api/client/tour")
+    Call<String> checkBooking(@Body BookingRequest bo);
+
+    @POST("api/client/booking")
+    Call<String> booking(@Body BookingRequest bo);
 }

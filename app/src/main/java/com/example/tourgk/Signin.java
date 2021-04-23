@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 public class Signin extends AppCompatActivity {
 
-    TextView tvUsername,tvPassword;
-    Button btnSigninConfirm,btnSignup;
+    TextView tvUsername, tvPassword;
+    Button btnSigninConfirm, btnSignup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +30,19 @@ public class Signin extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnSigninConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void setControl() {
-        tvUsername=findViewById(R.id.tvUsername);
-        tvPassword=findViewById(R.id.tvPassword);
-        btnSigninConfirm=findViewById(R.id.btnSigninConfirm);
-        btnSignup=findViewById(R.id.btnSignup);
+        tvUsername = findViewById(R.id.tvUsername);
+        tvPassword = findViewById(R.id.tvPassword);
+        btnSigninConfirm = findViewById(R.id.btnSigninConfirm);
+        btnSignup = findViewById(R.id.btnSignup);
     }
 }

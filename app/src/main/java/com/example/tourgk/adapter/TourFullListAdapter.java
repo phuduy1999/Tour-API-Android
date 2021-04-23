@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.tourgk.ListTour;
+import com.example.tourgk.MainActivity;
 import com.example.tourgk.R;
 import com.example.tourgk.TourDetail;
 import com.example.tourgk.api.ApiClient;
@@ -65,7 +66,12 @@ public class TourFullListAdapter extends RecyclerView.Adapter<TourFullListAdapte
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((ListTour)context).chuyenTrangDetail(tour.getId());
+                try {
+                    ((ListTour)context).chuyenTrangDetail(tour.getId());
+                }
+                catch (Exception e){
+                    ((MainActivity)context).chuyenTrangDetail(tour.getId());
+                }
             }
         });
     }

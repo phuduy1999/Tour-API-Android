@@ -41,11 +41,36 @@ public class MainActivity extends AppCompatActivity {
 
         setControl();
         setEvent();
+    }
+
+    private void setControl() {
+        tvSeeAll = findViewById(R.id.tvSeeAll);
+        tourRecycler = findViewById(R.id.rcvNewTours);
+        topTourRecycler = findViewById(R.id.rcvTopTours);
+        imgUser = findViewById(R.id.imgUser);
+    }
+
+    private void setEvent() {
+        tvSeeAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListTour.class);
+                startActivity(intent);
+            }
+        });
+
+        imgUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Signin.class);
+                startActivity(intent);
+            }
+        });
 
         //call API
         ApiService service = ApiClient.getClient().create(ApiService.class);
 
-        Call<Tour> tours = service.getTours(1,9);
+        Call<Tour> tours = service.getTours(1, 9);
         tours.enqueue(new Callback<Tour>() {
             @Override
             public void onResponse(Call<Tour> call, Response<Tour> response) {
@@ -67,31 +92,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void setControl(){
-        tvSeeAll=findViewById(R.id.tvSeeAll);
-        tourRecycler = findViewById(R.id.rcvNewTours);
-        topTourRecycler = findViewById(R.id.rcvTopTours);
-        imgUser=findViewById(R.id.imgUser);
-    }
-
-    private void setEvent(){
-        tvSeeAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ListTour.class);
-                startActivity(intent);
-            }
-        });
-
-        imgUser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Signin.class);
-                startActivity(intent);
-            }
-        });
-    }
-
     private void setTourRecycler(List<Tour> tourList) {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         tourRecycler.setLayoutManager(layoutManager);
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         topTourRecycler.setAdapter(topTourAdapter);
     }
 
-    public void chuyenTrangDetail(Long id){
+    public void chuyenTrangDetail(Long id) {
         Intent intent = new Intent(this, TourDetail.class);
         Bundle bundle = new Bundle();
         bundle.putLong("id", id);
