@@ -1,6 +1,7 @@
 package com.example.tourgk.api;
 
 import com.example.tourgk.model.BookingRequest;
+import com.example.tourgk.model.Client;
 import com.example.tourgk.model.Tour;
 
 import retrofit2.Call;
@@ -20,5 +21,8 @@ public interface ApiService {
     Call<String> checkBooking(@Body BookingRequest bo);
 
     @POST("api/client/booking")
-    Call<String> booking(@Body BookingRequest bo);
+    Call<String> booking(@Body BookingRequest bookingRequest);
+
+    @POST("api/client")
+    Call<Client> createAccount(@Body Client client);
 }

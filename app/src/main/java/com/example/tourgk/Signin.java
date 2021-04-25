@@ -6,11 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 
 public class Signin extends AppCompatActivity {
 
-    TextView tvUsername, tvPassword;
+    EditText edtUsername, edtPassword;
     Button btnSigninConfirm, btnSignup;
 
     @Override
@@ -40,8 +40,8 @@ public class Signin extends AppCompatActivity {
     }
 
     private void setControl() {
-        tvUsername = findViewById(R.id.tvUsername);
-        tvPassword = findViewById(R.id.tvPassword);
+        edtUsername = findViewById(R.id.edtUsername);
+        edtPassword = findViewById(R.id.edtPassword);
         btnSigninConfirm = findViewById(R.id.btnSigninConfirm);
         btnSignup = findViewById(R.id.btnSignup);
     }

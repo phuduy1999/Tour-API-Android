@@ -51,7 +51,7 @@ public class TourDetail extends AppCompatActivity {
             @Override
             public void onResponse(Call<Tour> call, Response<Tour> response) {
                 if (!response.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(), response.code(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(TourDetail.this, response.code(), Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -74,7 +74,7 @@ public class TourDetail extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Tour> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(TourDetail.this, t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
 

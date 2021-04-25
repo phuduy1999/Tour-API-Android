@@ -21,5 +21,9 @@
     <string name="price">Giá: </string>
     <string name="amount">Số lượng: </string>
     <string name="titleinfo">THÔNG TIN CÁ NHÂN</string>
-
+    <string name="err_email">Vui lòng nhập email hợp lệ!</string>
+    <string name="err_name">Vui lòng nhập họ tên hợp lệ!</string>
+    <string name="err_phone">Vui lòng nhập số điện thoại hợp lệ!</string>
+    <string name="err_address">Vui lòng nhập địa chỉ!</string>
+    <string name="err_pass">Vui lòng nhập password!</string>
 </resources>

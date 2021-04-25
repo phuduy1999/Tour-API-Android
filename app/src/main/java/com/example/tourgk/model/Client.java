@@ -51,6 +51,15 @@ public class Client extends Abstract<com.example.tourgk.model.Client>{
     @Expose
     private List<Tour> tours = new ArrayList<>();
 
+    public Client(String name, boolean gender, String email, String address, String phoneNumber, String password) {
+        this.name = name;
+        this.gender = gender;
+        this.email = email;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.password = password;
+    }
+
     public String getName() {
         return name;
     }
