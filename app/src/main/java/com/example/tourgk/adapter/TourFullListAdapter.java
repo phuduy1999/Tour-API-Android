@@ -1,9 +1,7 @@
 package com.example.tourgk.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +15,6 @@ import com.bumptech.glide.Glide;
 import com.example.tourgk.ListTour;
 import com.example.tourgk.MainActivity;
 import com.example.tourgk.R;
-import com.example.tourgk.TourDetail;
 import com.example.tourgk.api.ApiClient;
 import com.example.tourgk.model.Tour;
 
@@ -91,7 +88,7 @@ public class TourFullListAdapter extends RecyclerView.Adapter<TourFullListAdapte
         public TourFullListViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imgTour = itemView.findViewById(R.id.imgTour);
+            imgTour = itemView.findViewById(R.id.imgTourPayment2);
             tvTourName = itemView.findViewById(R.id.tvName);
             tvLocation = itemView.findViewById(R.id.tvLocation);
             tvPrice = itemView.findViewById(R.id.tvPrice);

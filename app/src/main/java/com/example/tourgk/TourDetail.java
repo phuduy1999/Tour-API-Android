@@ -25,10 +25,8 @@ public class TourDetail extends AppCompatActivity {
 
     ImageView imgTour;
     TextView tvTourName, tvLocation, tvPrice, tvDuration, tvStartDate, tvGroupSize;
-    Long id;
-    Button btnConfirm;
-
     Long tourId;
+    Button btnConfirm;
 
     ApiService service = ApiClient.getClient().create(ApiService.class);
 
@@ -39,14 +37,14 @@ public class TourDetail extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
-        id = bundle.getLong("id");
+        tourId = bundle.getLong("id");
 
         setControl();
         setEvent();
     }
 
     private void setEvent() {
-        Call<Tour> tour = service.getTourById(id);
+        Call<Tour> tour = service.getTourById(tourId);
         tour.enqueue(new Callback<Tour>() {
             @Override
             public void onResponse(Call<Tour> call, Response<Tour> response) {
@@ -57,7 +55,6 @@ public class TourDetail extends AppCompatActivity {
 
                 Tour tour = response.body();
 
-                tourId = tour.getId();
                 tvTourName.setText(tour.getName());
                 tvDuration.setText(String.valueOf(tour.getDuration()) + " ngày");
                 tvLocation.setText(tour.getLocation());
@@ -81,7 +78,12 @@ public class TourDetail extends AppCompatActivity {
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkBooking("phuduy1999@gmail.com", tourId);
+                if(Signin.username.equals("")){
+                    Toast.makeText(TourDetail.this, "Vui lòng đăng nhập trước khi đặt vé!", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(TourDetail.this, Signin.class);
+                    startActivity(intent);
+                }
+                else checkBooking();
             }
         });
     }
@@ -105,8 +107,8 @@ public class TourDetail extends AppCompatActivity {
         // }
     }
 
-    private void checkBooking(String email, Long tourId) {
-        Call<String> result = service.checkBooking(new BookingRequest(email, tourId));
+    private void checkBooking() {
+        Call<String> result = service.checkBooking(new BookingRequest(Signin.username, tourId));
         result.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
@@ -143,7 +145,7 @@ public class TourDetail extends AppCompatActivity {
     private void chuyenTrangPayment() {
         Intent intent = new Intent(TourDetail.this, Payment.class);
         Bundle bundle = new Bundle();
-        bundle.putLong("id", id);
+        bundle.putLong("id", tourId);
         intent.putExtras(bundle);
         startActivity(intent);
     }

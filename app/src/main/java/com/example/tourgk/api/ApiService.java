@@ -2,6 +2,7 @@ package com.example.tourgk.api;
 
 import com.example.tourgk.model.BookingRequest;
 import com.example.tourgk.model.Client;
+import com.example.tourgk.model.LoginRequest;
 import com.example.tourgk.model.Tour;
 
 import retrofit2.Call;
@@ -25,4 +26,10 @@ public interface ApiService {
 
     @POST("api/client")
     Call<Client> createAccount(@Body Client client);
+
+    @POST("api/login")
+    Call<String> login(@Body LoginRequest lo);
+
+    @POST("api/client/email")
+    Call<Client> getClient(@Body Client lo);
 }

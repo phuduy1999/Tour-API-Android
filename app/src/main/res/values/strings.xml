@@ -26,4 +26,5 @@
     <string name="err_phone">Vui lòng nhập số điện thoại hợp lệ!</string>
     <string name="err_address">Vui lòng nhập địa chỉ!</string>
     <string name="err_pass">Vui lòng nhập password!</string>
+    <string name="err_slp">Vui lòng nhập số lượng vé cần mua!</string>
 </resources>

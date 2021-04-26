@@ -8,7 +8,7 @@
     android:layout_marginEnd="10dp">
 
     <ImageView
-        android:id="@+id/imgTour"
+        android:id="@+id/imgTourPayment2"
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:src="@drawable/b" />
