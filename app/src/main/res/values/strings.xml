@@ -27,4 +27,10 @@
     <string name="err_address">Vui lòng nhập địa chỉ!</string>
     <string name="err_pass">Vui lòng nhập password!</string>
     <string name="err_slp">Vui lòng nhập số lượng vé cần mua!</string>
+    <string name="buttoninfo">Xem/Sửa thông tin cá nhân</string>
+    <string name="buttoncreate">Thêm tài khoản mới</string>
+    <string name="buttonorder">Đơn hàng đã đặt</string>
+    <string name="btnHome">Trang chủ</string>
+    <string name="btnlogout">Đăng xuất</string>
+
 </resources>
