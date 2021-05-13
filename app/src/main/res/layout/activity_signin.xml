@@ -66,10 +66,12 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="2dp"
         android:layout_marginRight="2dp"
+        android:background="@drawable/button_background"
         android:text="@string/confirm"
         android:textColor="#29AFE4"
         android:textSize="24sp"
-        app:backgroundTint="#EDEBE9" />
+        app:backgroundTint="#EDEBE9"
+        />
 
     <Button
         android:id="@+id/btnSignup"

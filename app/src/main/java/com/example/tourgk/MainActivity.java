@@ -62,16 +62,22 @@ public class MainActivity extends AppCompatActivity {
         imgUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Signin.class);
-                startActivity(intent);
+                if(Signin.username.isEmpty()){
+                    Intent intent = new Intent(MainActivity.this, Signin.class);
+                    startActivity(intent);
+                }
+                else{
+                    Intent intent = new Intent(MainActivity.this, Information.class);
+                    startActivity(intent);
+                }
             }
         });
 
-        //call API
+        //call API new tours
         ApiService service = ApiClient.getClient().create(ApiService.class);
 
-        Call<Tour> tours = service.getTours(1, 9);
-        tours.enqueue(new Callback<Tour>() {
+        Call<Tour> newTours = service.getNewTours();
+        newTours.enqueue(new Callback<Tour>() {
             @Override
             public void onResponse(Call<Tour> call, Response<Tour> response) {
                 if (!response.isSuccessful()) {
@@ -82,6 +88,26 @@ public class MainActivity extends AppCompatActivity {
                 Tour tour = response.body();
 
                 setTourRecycler(tour.getListResult());
+            }
+
+            @Override
+            public void onFailure(Call<Tour> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+        //call API hot tours
+        Call<Tour> hotTours = service.getHotTours();
+        hotTours.enqueue(new Callback<Tour>() {
+            @Override
+            public void onResponse(Call<Tour> call, Response<Tour> response) {
+                if (!response.isSuccessful()) {
+                    Toast.makeText(getApplicationContext(), response.code(), Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                Tour tour = response.body();
+
                 setTopTourRecycler(tour.getListResult());
             }
 

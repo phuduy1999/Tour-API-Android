@@ -9,11 +9,18 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface ApiService {
     @GET("api/tours/{page}/{limit}")
     Call<Tour> getTours(@Path("page") int page, @Path("limit") int limit);
+
+    @GET("api/hot-tours")
+    Call<Tour> getHotTours();
+
+    @GET("api/new-tours")
+    Call<Tour> getNewTours();
 
     @GET("api/tours/{id}")
     Call<Tour> getTourById(@Path("id") Long id);
@@ -32,4 +39,8 @@ public interface ApiService {
 
     @POST("api/client/email")
     Call<Client> getClient(@Body Client lo);
+
+    @PUT("api/client")
+    Call<Client> updateAccount(@Body Client client);
+
 }

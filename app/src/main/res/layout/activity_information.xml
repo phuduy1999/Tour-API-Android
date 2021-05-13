@@ -64,7 +64,7 @@
             android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/tvNameClientInfo"
+            android:id="@+id/edtNameClientInfo"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -116,29 +116,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
-            android:text="@string/dob"
-            android:textSize="20dp" />
-
-        <EditText
-            android:id="@+id/tvBirthDayInfo"
-            android:layout_width="380dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:gravity="left"
-            android:text="@string/project_name"
-            android:textSize="24dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"
             android:text="@string/email"
             android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/tvEmailInfo"
+            android:id="@+id/edtEmailInfo"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -156,7 +138,7 @@
             android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/tvPhoneNumberInfo"
+            android:id="@+id/edtPhoneNumberInfo"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -174,7 +156,7 @@
             android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/tvAddressInfo"
+            android:id="@+id/edtAddressInfo"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

@@ -7,8 +7,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    public static String BASE_URL ="https://bookingtour.herokuapp.com/";
-    //public static String BASE_URL ="http://localhost:9090/";
+    //public static String BASE_URL ="https://bookingtour.herokuapp.com/";
+    public static String BASE_URL ="http://192.168.1.8:8080/";
     public static Retrofit getClient(){
         Gson gson=new GsonBuilder()
                 .setLenient()

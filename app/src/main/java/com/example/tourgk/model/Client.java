@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Client extends Abstract<com.example.tourgk.model.Client>{
+public class Client extends Abstract<com.example.tourgk.model.Client> {
     @SerializedName("name")
     @Expose
     private String name;
@@ -60,6 +60,15 @@ public class Client extends Abstract<com.example.tourgk.model.Client>{
         this.password = password;
     }
 
+    public Client(Long userID, String name, boolean gender, String email, String address, String phoneNumber) {
+        this.userID = userID;
+        this.name = name;
+        this.gender = gender;
+        this.email = email;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+    }
+
     public Client(String name, boolean gender, String email, String address, String phoneNumber, String password) {
         this.name = name;
         this.gender = gender;
@@ -72,66 +81,87 @@ public class Client extends Abstract<com.example.tourgk.model.Client>{
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public Long getUserID() {
         return userID;
     }
+
     public void setUserID(Long userID) {
         this.userID = userID;
     }
+
     public boolean isGender() {
         return gender;
     }
+
     public void setGender(boolean gender) {
         this.gender = gender;
     }
+
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
+
     public String getAddress() {
         return address;
     }
+
     public void setAddress(String address) {
         this.address = address;
     }
+
     public String getPhoneNumber() {
         return phoneNumber;
     }
+
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
+
     public String getRole() {
         return role;
     }
+
     public void setRole(String role) {
         this.role = role;
     }
+
     public String getUsername() {
         return username;
     }
+
     public void setUsername(String username) {
         this.username = username;
     }
+
     public Integer getStatus() {
         return status;
     }
+
     public void setStatus(Integer status) {
         this.status = status;
     }
+
     public List<Tour> getTours() {
         return tours;
     }
+
     public void setTours(List<Tour> tours) {
         this.tours = tours;
     }
